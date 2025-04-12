@@ -3,15 +3,16 @@
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
   xsi:type="TaskPaneApp">
   
   <Id>7fbb3d12-ff09-4f22-9b93-vercel00001</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>AI Writing Assistant</ProviderName>
+  <ProviderName>Smart Translate</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   
-  <DisplayName DefaultValue="Smart Translate Assistant"/>
-  <Description DefaultValue="Fix grammar, translate &amp; rewrite tone instantly with AI"/>
+  <DisplayName DefaultValue="Smart Translate"/>
+  <Description DefaultValue="Translate and improve your text with AI"/>
   <IconUrl DefaultValue="https://smart-translate-v3.vercel.app/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://smart-translate-v3.vercel.app/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://smart-translate-v3.vercel.app/support"/>
@@ -19,6 +20,12 @@
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
+  
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="SharedRuntime" MinVersion="1.1"/>
+    </Sets>
+  </Requirements>
   
   <DefaultSettings>
     <SourceLocation DefaultValue="https://smart-translate-v3.vercel.app/taskpane"/>
@@ -38,8 +45,8 @@
           <FunctionFile resid="Commands.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
-              <Group id="CommandsGroup">
-                <Label resid="CommandsGroup.Label"/>
+              <Group id="SmartTranslateGroup">
+                <Label resid="GroupLabel"/>
                 <Icon>
                   <bt:Image size="16" resid="Icon.16x16"/>
                   <bt:Image size="32" resid="Icon.32x32"/>
@@ -80,12 +87,12 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with Smart Translate"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Smart Translate"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Smart Translate"/>
+        <bt:String id="GroupLabel" DefaultValue="Smart Translate"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Translate"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Smart Translate loaded successfully. Go to the HOME tab and click the 'Smart Translate' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to open Smart Translate"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Open Smart Translate to improve your text"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
