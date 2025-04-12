@@ -15,6 +15,6 @@ export async function POST(req: NextRequest) {
     messages: [{ role: "user", content: prompt }],
   });
 
-  const corrected = response.content[0].text;
+  const corrected = (response.content[0] as { text: string }).text;
   return NextResponse.json({ result: corrected });
 }
