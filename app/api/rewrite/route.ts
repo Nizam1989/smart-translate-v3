@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   const prompt = `Please rewrite the following text to make it more professional and engaging:\n\n"${text}"`;
 
   const response = await anthropic.messages.create({
-    model: "claude-3-opus-20240229",
+    model: "claude-3-haiku-20240307",
     max_tokens: 1024,
     messages: [{ role: "user", content: prompt }],
   });

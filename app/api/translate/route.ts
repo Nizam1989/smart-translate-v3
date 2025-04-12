@@ -7,10 +7,10 @@ const anthropic = new Anthropic({
 
 export async function POST(req: NextRequest) {
   const { text } = await req.json();
-  const prompt = `Please translate the following text into English and make the tone professional:\n\n"${text}"`;
+  const prompt = `Translate the following Malay text to English. Keep the meaning accurate and maintain a professional tone. Only respond with the translated text, no explanations:\n\n"${text}"`;
 
   const response = await anthropic.messages.create({
-    model: "claude-3-opus-20240229",
+    model: "claude-3-haiku-20240307",
     max_tokens: 1024,
     messages: [{ role: "user", content: prompt }],
   });

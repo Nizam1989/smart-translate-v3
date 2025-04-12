@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
   const prompt = `Please check and correct any grammar, spelling, and punctuation errors in the following text:\n\n"${text}"`;
 
   const response = await anthropic.messages.create({
-    model: "claude-3-opus-20240229",
+    model: "claude-3-haiku-20240307",
     max_tokens: 1024,
     messages: [{ role: "user", content: prompt }],
   });
