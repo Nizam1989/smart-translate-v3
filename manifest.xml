@@ -10,8 +10,8 @@
   <DisplayName DefaultValue="AI Writing Assistant"/>
   <Description DefaultValue="Fix grammar, translate & rewrite tone instantly with AI"/>
 
-  <IconUrl DefaultValue="https://assistance-translator.vercel.app/logo.png"/>
-  <SupportUrl DefaultValue="https://assistance-translator.vercel.app/support"/>
+  <IconUrl DefaultValue="https://smart-translate-v3.vercel.app/logo.png"/>
+  <SupportUrl DefaultValue="https://smart-translate-v3.vercel.app/support"/>
 
   <Hosts>
     <Host Name="Document"/>
@@ -24,7 +24,7 @@
   </Requirements>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://assistance-translator.vercel.app/taskpane"/>
+    <SourceLocation DefaultValue="https://smart-translate-v3.vercel.app/"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
