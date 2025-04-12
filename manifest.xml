@@ -24,7 +24,7 @@
   </Requirements>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://smart-translate-v3.vercel.app/"/>
+    <SourceLocation DefaultValue="https://smart-translate-v3.vercel.app/taskpane"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
