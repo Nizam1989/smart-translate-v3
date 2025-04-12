@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>7fbb3d12-ff09-4f22-9b93-vercel00001</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>AI Writing Assistant</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+
+  <DisplayName DefaultValue="AI Writing Assistant"/>
+  <Description DefaultValue="Fix grammar, translate & rewrite tone instantly with AI"/>
+
+  <IconUrl DefaultValue="https://[YOUR-VERCEL-URL]/logo.png"/>
+  <SupportUrl DefaultValue="https://[YOUR-VERCEL-URL]/support"/>
+
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="WordApi"/>
+    </Sets>
+  </Requirements>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://[YOUR-VERCEL-URL]/"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
