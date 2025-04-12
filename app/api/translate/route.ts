@@ -15,6 +15,6 @@ export async function POST(req: NextRequest) {
     messages: [{ role: "user", content: prompt }],
   });
 
-  const translated = response.content[0].text;
+  const translated = (response.content[0] as { text: string }).text;
   return NextResponse.json({ result: translated });
 }
